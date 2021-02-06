@@ -1,10 +1,23 @@
-import "./styles.css";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Layout from "./layout/layout";
+import Tips from "./apps/tips/tips";
+import YourApp from "./apps/your_app/your_app";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <Layout>
+      <Switch>
+        <Route exact path={"/"}>
+          <YourApp />
+        </Route>
+        <Route path={"/tips"}>
+          <Tips />
+        </Route>
+        <Route path="*">
+          <Tips error="404" />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
