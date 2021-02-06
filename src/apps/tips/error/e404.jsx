@@ -5,7 +5,7 @@ const Tips = () => {
   return (
     <>
       <Cover state="error">
-        <h1>Algo Salio mal con el enrutamiento</h1>
+        <h1>Eroor 404, Page not found</h1>
       </Cover>
       <article>
         <h2>-_- z Z z Z </h2>
